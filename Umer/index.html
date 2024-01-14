@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+
+    
+
+    <button class="toggle-btn" onclick="toggleDrawer()">Open Sidebar</button>
+    <div id="drawer" class="drawer">
+        <span class="close-btn" onclick="toggleDrawer()">&times;</span>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="xyz">
+            <h1 style="color: rgb(92, 172, 12);">Pak<b style="color: black;">Search</b></h1>
+          </div>
+        
+          <div class="search-bar">
+            <form action="https://www.google.com/search" method="get">
+              <input type="text" name="q" placeholder="Search here...">
+              <button type="submit"><i class="fa fa-search"></i>Search</button>
+            </form>
+          </div>
+
+    </div>
+
+    <video autoplay loop muted plays-inline class="back-video">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <script>
+        function toggleDrawer() {
+            var drawer = document.getElementById('drawer');
+            drawer.style.width = drawer.style.width === '250px' ? '0' : '250px';
+
+            var content = document.querySelector('.content');
+            content.style.marginLeft = content.style.marginLeft === '250px' ? '0' : '250px';
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>

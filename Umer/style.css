@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0%;
+    z-index: -1;
+}
+
+.xyz {
+    /* margin-top: -5%; */
+    text-align: center;
+    font-size: 160%;
+}
+
+/* Style the search bar container */
+.search-bar {
+    /* max-width: 500px; */
+    margin: 0 auto;
+    /* Center horizontally */
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    /* Padding for better mobile view */
+}
+
+.toggle-btn {
+    background-color: #d11111;
+    margin-top: 50px;
+    border-radius: 5px;
+    padding: 10px;
+    border: #d11111;
+    color: white;
+    margin-left: 46%;
+}
+
+
+/* Style the search input field */
+.search-bar input[type="text"] {
+    width: calc(100% - 100px);
+    /* Responsive width calculation */
+    max-width: 500px;
+    /* Limit maximum width */
+    height: 25px;
+    padding: 7px;
+    border: 1px solid #000000;
+    font-size: 18px;
+    outline: none;
+    border-radius: 10px;
+    display: block;
+    /* Display as block for mobile view */
+    margin: -2% auto;
+}
+
+/* Style the search button */
+.search-bar button {
+    background-color: #d11111;
+    margin-top: 50px;
+    border-radius: 5px;
+    padding: 10px;
+    border: #d11111;
+    color: white;
+    margin-left: 48%;
+    margin-top: -30%;
+}
+
+/* Change the background color of the button on hover */
+.search-bar button:hover {
+    background-color: #be0000;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .search-bar input[type="text"] {
+        width: calc(100% - 60px);
+        /* Adjust width calculation */
+        max-width: 300px;
+        /* Adjust maximum width */
+    }
+}
+
+.drawer {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #adaaaa;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    backdrop-filter: blur(3px);
+    border-radius: 0% 25px;
+}
+
+.drawer a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+    backdrop-filter: blur(3px);
+}
+
+.drawer a:hover {
+    color: #f1f1f1;
+}
+
+.drawer .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.content {
+    margin-left: 0;
+    transition: margin-left 0.5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .drawer {
+        padding-top: 15px;
+    }
+
+    .drawer a {
+        font-size: 18px;
+    }
+}
