@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .drawer {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .drawer a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .drawer a:hover {
+            color: #f1f1f1;
+        }
+
+        .drawer .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .content {
+            margin-left: 0;
+            transition: margin-left 0.5s;
+            padding: 16px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .drawer {padding-top: 15px;}
+            .drawer a {font-size: 18px;}
+        }
+    </style>
+    <title>Responsive Sidebar</title>
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleDrawer()">Toggle Drawer</button>
+    <div id="drawer" class="drawer">
+        <span class="close-btn" onclick="toggleDrawer()">&times;</span>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Main Content Goes Here</h1>
+        <p>This is the main content of your page.</p>
+    </div>
+    <script>
+        function toggleDrawer() {
+            var drawer = document.getElementById('drawer');
+            drawer.style.width = drawer.style.width === '250px' ? '0' : '250px';
+
+            var content = document.querySelector('.content');
+            content.style.marginLeft = content.style.marginLeft === '250px' ? '0' : '250px';
+        }
+    </script>
+</body>
+</html>
